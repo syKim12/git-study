@@ -230,3 +230,71 @@ $ ^C
 
 yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
 $
+
+
+yeoun@DESKTOP-8E0I2NV MINGW64 ~ (master)
+$ cd D:/yonsei/codingTest
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git init
+Reinitialized existing Git repository in D:/yonsei/codingTest/.git/
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git add baekJoon
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git add baekJoon/.
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git commit -m 'upload baekJoon files'
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       .ipynb_checkpoints/baekJoon_step7-checkpoint.ipynb
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git rm ipynb_checkpoints/baekJoon_step7-checkpoint.ipynb
+fatal: pathspec 'ipynb_checkpoints/baekJoon_step7-checkpoint.ipynb' did not match any files
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git rm .ipynb_checkpoints/baekJoon_step7-checkpoint.ipynb
+rm '.ipynb_checkpoints/baekJoon_step7-checkpoint.ipynb'
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git push origin master
+To https://github.com/syKim12/algorithm-study.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/syKim12/algorithm-study.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+# I turned off git bash and tried it again
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master|MERGING)
+$ git commit -m 'add baekjoon folder'
+[master 721f809] add baekjoon folder
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master)
+$ git push origin master
+Enumerating objects: 36, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (32/32), 6.07 KiB | 345.00 KiB/s, done.
+Total 32 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), completed with 2 local objects.
+To https://github.com/syKim12/algorithm-study.git
+   54085f8..721f809  master -> master
+
+yeoun@DESKTOP-8E0I2NV MINGW64 /d/yonsei/codingTest (master)
+$
